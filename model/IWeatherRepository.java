@@ -1,6 +1,6 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model;
+package ru.geekbrains.JAVA2.outStanding.model;
 
-import ru.geekbrains.JAVA2.lesson7even.project.model.entity.Weather;
+import ru.geekbrains.JAVA2.outStanding.model.entity.Weather;
 
 import java.util.List;
 

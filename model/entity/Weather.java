@@ -1,4 +1,4 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model.entity;
+package ru.geekbrains.JAVA2.outStanding.model.entity;
 
 public class Weather {
 

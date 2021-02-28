@@ -1,7 +1,7 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model;
+package ru.geekbrains.JAVA2.outStanding.model;
 
-import ru.geekbrains.JAVA2.lesson7even.project.AppGlobalState;
-import ru.geekbrains.JAVA2.lesson7even.project.model.entity.Weather;
+import ru.geekbrains.JAVA2.outStanding.AppGlobalState;
+import ru.geekbrains.JAVA2.outStanding.model.entity.Weather;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SQLiteWeatherRepository implements IWeatherRepository {
+public class SQLiteWeatherRepository implements IWeatherRepository{
     @Override
     public List<Weather> getAllData() {
         Statement statement = AppGlobalState.getStatement();
