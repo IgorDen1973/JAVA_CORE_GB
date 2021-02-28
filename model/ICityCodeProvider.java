@@ -1,4 +1,4 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model;
+package ru.geekbrains.JAVA2.outStanding.model;
 
 import java.io.IOException;
 

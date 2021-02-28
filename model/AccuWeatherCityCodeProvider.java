@@ -1,11 +1,12 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model;
+package ru.geekbrains.JAVA2.outStanding.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import ru.geekbrains.JAVA2.lesson7even.project.AppGlobalState;
+import ru.geekbrains.JAVA2.outStanding.AppGlobalState;
+
 
 import java.io.IOException;
 

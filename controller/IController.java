@@ -1,4 +1,4 @@
-package ru.geekbrains.JAVA2.lesson7even.project.controller;
+package ru.geekbrains.JAVA2.outStanding.controller;
 
 import java.io.IOException;
 import java.text.ParseException;

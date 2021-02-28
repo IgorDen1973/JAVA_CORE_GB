@@ -1,4 +1,4 @@
-package ru.geekbrains.JAVA2.lesson7even.project.view;
+package ru.geekbrains.JAVA2.outStanding.view;
 
 public interface IUserInterface {
     void showMenu ();

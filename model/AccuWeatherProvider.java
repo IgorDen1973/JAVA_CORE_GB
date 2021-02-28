@@ -1,12 +1,11 @@
-package ru.geekbrains.JAVA2.lesson7even.project.model;
+package ru.geekbrains.JAVA2.outStanding.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import ru.geekbrains.JAVA2.lesson7even.project.AppGlobalState;
-import ru.geekbrains.JAVA2.lesson7even.project.model.entity.Weather;
+import ru.geekbrains.JAVA2.outStanding.AppGlobalState;
 
 
 import java.io.IOException;
@@ -29,7 +28,7 @@ public class AccuWeatherProvider implements IWeatherProvider{
 
 
     @Override
-    public Weather getCurrentWeather(String cityKey) throws IOException, ParseException {
+    public void getCurrentWeather(String cityKey) throws IOException, ParseException {
         //http://dataservice.accuweather.com/currentconditions/v1/27497?apikey={{accuweatherApiKey}}
 
         HttpUrl getWeatherUrl = new HttpUrl.Builder()
@@ -50,7 +49,6 @@ public class AccuWeatherProvider implements IWeatherProvider{
         if (!response.isSuccessful()) {
             throw new IOException("Ошибка сети\n");
         }
-
         String jsonBody2 = response.body().string();
 
         String OneDayCityName = AppGlobalState.getInstance().getCityName1();
@@ -63,12 +61,9 @@ public class AccuWeatherProvider implements IWeatherProvider{
 
         String OneDayDescription = objectMapper.readTree(jsonBody2).get(0).at("/WeatherText").asText().toLowerCase();   // Cloudy
         String OneDayTemperature = objectMapper.readTree(jsonBody2).get(0).at("/Temperature/Metric/Value").asText();  // Temperature
-//
-//        System.out.printf("At %s in %s expected %s with temperature %s C\n", OneDayForecastDate, OneDayCityName, OneDayDescription, OneDayTemperature);
-//        System.out.println("  ");
 
-        Weather result = new Weather(OneDayForecastDate,OneDayCityName,OneDayTemperature,OneDayDescription);
-        return result;
+        System.out.printf("At %s in %s expected %s with temperature %s C\n", OneDayForecastDate, OneDayCityName, OneDayDescription, OneDayTemperature);
+        System.out.println("  ");
     }
 
     @Override    // ****************** добавил  ************************

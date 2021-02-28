@@ -1,4 +1,4 @@
-package ru.geekbrains.JAVA2.lesson7even.project.enums;
+package ru.geekbrains.JAVA2.outStanding.enums;
 
 public enum UserCommands {
     GET_CURRENT_WEATHER,
